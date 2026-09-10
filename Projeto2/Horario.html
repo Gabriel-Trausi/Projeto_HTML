@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template - Utilizar como modelo</title>
+    <link rel="stylesheet" href="base.css">
+
+    <style>    
+        mark{
+            background-color: green;
+        }
+        table{
+                box-shadow: 13px 16px 35px -1px rgba(0, 0, 0, 0.82);
+                -webkit-box-shadow: 13px 16px 35px -1px rgba(0, 0, 0, 0.82);
+                border: solid 1px rgb(2, 71, 13)
+            }
+
+            table tr:nth-child(even) {
+                background-color: green;
+            }
+
+            table tr:hover td {
+                background-color: rgb(73, 243, 73);
+                cursor: pointer;
+            }
+
+            table thead th{
+                background-color: green;
+                color: white;
+                border: dashed 1px black;
+            }
+
+            table tbody{
+                background-color: green;
+                color: white;
+            }
+
+            table tfoot{
+                background-color: green;
+                color: white;
+            }
+
+            table caption{
+                border: solid 1px green;
+                background-color: black;
+                color: white;
+            }
+        </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <h2>ExoVet</h2>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+            </ul>
+            <div class="sidebar-section">
+                <h3>Animais atendidos</h3>
+                <p>Aves</p><p>Répteis</p><p>Coelhos</p>
+                <p>Pequenos mamíferos</p><p>Grandes mamíferos</p>
+                <p>Animais perigosos</p>
+            </div>
+            <div class="sidebar-contact">
+                <h3>Contato rápido</h3>
+                <p>WhatsApp</p>
+                <strong>+61 491 570 156</strong>
+            </div>
+            <div class="sidebar-tip">
+                <h3>Curiosidade da fauna</h3>
+                <p id="fauna-tip">As tartarugas podem reconhecer seus cuidadores pelo cheiro e pela voz.</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <img src="ExoVet.png" alt="Logo da clínica">
+            </div>
+    
+            <div class="content">
+                <h3>Nossa Equipe de Veterinários</h3>
+                <p>Conheça os profissionais especializados que cuidarão do seu animal com dedicação, conhecimento e carinho:</p>
+
+                <ul summary="Lista para a descrção dos veterinarios">
+                    <li><p><strong>Gabriel:</strong> Especialista em <mark>répteis e fauna australiana</mark>. Profundo conhecimento sobre dragões-de-barbada, cobras nativas, lagartos e tartarugas. Orienta sobre temperatura, iluminação, alimentação e todos os cuidados específicos dessas espécies tão fascinantes.</li></p>
+                    <li><p><strong>Luisa:</strong>Especialista em <mark>exóticas e aves nativas da Austrália</mark>. Atende papagaios, calopsitas, periquitos e diversas outras espécies. É a pessoa certa para orientar sobre alimentação, comportamento, doenças e bem-estar de aves.</li></p>
+                    <li><p><strong>Guilherme:</strong>Especialista em <mark>diagnóstico por imagem e exames laboratoriais</mark>. É quem detalha a saúde do seu pet através de exames precisos. Detalhista e atento, ajuda a identificar problemas precocemente, aumentando muito as chances de tratamento eficaz.</p></li>
+                    <li><p><strong>Simone:</strong>Especialista em <mark>anestesiologia, cirurgias e mamíferos exóticos</mark>. Com vasta experiência em procedimentos cirúrgicos seguros e adaptados a cada espécie, além de cuidados com furões, ouriços e pequenos mamíferos. Segurança e precisão em cada atendimento.</p></li>
+                    <li><p><strong>Sueli:</strong>Especialista em <mark>nutrição e comportamento animal</mark>. Acredita que a base da saúde está na alimentação certa e no ambiente adequado. Orienta você sobre dieta, enriquecimento ambiental e como entender melhor o comportamento do seu companheiro.</p></li>
+                    <li><p><strong>Walter:</strong>Especialista em <mark>medicina preventiva e emergências</mark>. Foca em orientar cuidados antecipados para evitar doenças, além de atender com agilidade e calma nos momentos de urgência. É quem garante que nada passará despercebido.</p></li>
+                    <li><p><strong>José:</strong>Especialista em <mark>anfíbios e espécies menos comuns</mark>. Profundo conhecimento sobre sapos, rãs e outros animais exóticos. É nosso especialista em habitat, qualidade de água, umidade e todos os cuidados específicos dessas espécies únicas.</p></li>
+                </ul>
+
+                <p><h4>Cada um com sua especialidade, mas todos com o mesmo objetivo: oferecer ao seu animal exótico o atendimento mais completo, seguro e especializado possível. Aqui, seu pet é visto por quem realmente entende da espécie dele!</h4></p>
+                <p><h3>Veja na planilha abaixo o horário dos veterinários:</h3></p>
+        <table summary="Uma planilha que mostra os dias e horários que trabalhamos" cellspacing="0" cellpadding="15" width="250" align="center">
+            <caption align="center"></caption>
+            <thead>
+            <tr>
+                <th title="Veterinários">Vet</th>
+                <th title="Segunda a sexta">Seg-sex</th>
+                <th title="Domingo">Domingo</th>
+                <th title="Feriado">Feriado</th>
+
+            </tr>
+            </thead>
+
+            <tbody align="center">
+                <tr id="1">
+                    <td>Gabriel</td>
+                    <td>08:00/18:00</td>
+                    <td>10:00/15:00</td>
+                    <td>--</td>
+                </tr>
+
+                <tr id="2">
+                    <td>Luisa</td>
+                    <td>07:00/17:00</td>
+                    <td>10:00/15:00</td>
+                    <td>10:00/14:00</td>
+                </tr>
+
+                <tr id="3">
+                    <td>Guilherme</td>
+                    <td>08:00/18:00</td>
+                    <td>--</td>
+                    <td>10:00/14:00</td>
+                </tr>
+
+                <tr id="4">
+                    <td>Simone</td>
+                    <td>07:00/17:00</td>
+                    <td>10:00/15:00</td>
+                    <td>08:00/14:00</td>
+                </tr>
+
+                <tr id="5">
+                    <td>Sueli</td>
+                    <td>19:00/00:00</td>
+                    <td>19:00:23:00</td>
+                    <td>--</td>
+                </tr>
+
+                <tr id="6">
+                    <td>Walter</td>
+                    <td>00:00/12:00</td>
+                    <td>00:00/12:00</td>
+                    <td>--</td>
+                </tr>
+
+                <tr id="7">
+                    <td>josé</td>
+                    <td>12:00/00:00</td>
+                    <td>--</td>
+                    <td>12:00/00:00</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th colspan="3">Total de veterinários</th>
+                    <th align="center">7</th>
+                </tr>
+            </tfoot>
+        </table>
+            </div>
+    
+            <div class="footer" style="height: auto; min-height: 0;">
+                <div class="footer-column">
+                    <h2>Contatos</h2>
+                    <p>Celular: +61 482 915 364</p>
+                    <p>Email: exovet@gmail.com</p>
+                </div>
+                <div class="footer-column">
+                    <h2>Atendimento</h2>
+                    <p>Endereço: Sydney, Austrália</p>
+                    <p>Horário: 08h às 18h</p>
+                </div>
+                <div class="footer-column">
+                    <h2>WhatsApp</h2>
+                    <p>+61 491 570 156</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const faunaTips = [
+            'As tartarugas podem reconhecer seus cuidadores pelo cheiro e pela voz.',
+            'O polvo possui três corações e sangue de cor azul.',
+            'Os camaleões movimentam os olhos de forma independente.',
+            'As araras podem viver por muitas décadas quando recebem os cuidados adequados.',
+            'O ornitorrinco é um dos poucos mamíferos que põem ovos.',
+            'O canguru usa a cauda para manter o equilíbrio.',
+            'O coala dorme muitas horas por dia.',
+            'As corujas conseguem girar bastante a cabeça.',
+            'O diabo-da-tasmânia possui uma mordida muito forte.',
+            'Os ornitorrincos vivem próximos a rios e lagos.'
+        ];
+        let faunaTipIndex = 0;
+
+        setInterval(() => {
+            faunaTipIndex = (faunaTipIndex + 1) % faunaTips.length;
+            document.getElementById('fauna-tip').textContent = faunaTips[faunaTipIndex];
+        }, 10000);
+    </script>
+</body>
+</html>

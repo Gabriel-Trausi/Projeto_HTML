@@ -1,0 +1,167 @@
+html, body {
+    margin: 0;
+}
+
+:root {
+    --jungle-deep: #173f2a;
+    --jungle-green: #286b45;
+    --leaf-green: #6f9f52;
+    --moss: #b7c98b;
+    --bark: #70452b;
+    --amber: #d6a447;
+    --canopy-light: #e6edd2;
+}
+
+body {
+    background: linear-gradient(135deg, var(--moss), var(--canopy-light));
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    background-color: var(--leaf-green);
+}
+.main {
+    display: flex;
+    flex-flow: column;
+    width: 85%;
+}
+.menu {
+    width: 15%;
+    background-color: var(--jungle-deep);
+    padding: 10px 20px 0px;
+    color: var(--canopy-light);
+}
+.menu h2 {
+    color: var(--amber);
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--leaf-green);
+    padding-bottom: 12px;
+}
+.menu ul {
+    padding-left: 20px;
+}
+.menu li {
+    margin-bottom: 12px;
+}
+.sidebar-section,
+.sidebar-contact {
+    border-top: 1px solid var(--leaf-green);
+    margin-top: 28px;
+    padding-top: 12px;
+}
+.sidebar-section h3,
+.sidebar-contact h3 {
+    color: var(--amber);
+    font-size: 16px;
+}
+.sidebar-section p,
+.sidebar-contact p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+.sidebar-contact strong {
+    color: var(--canopy-light);
+    font-size: 13px;
+}
+.sidebar-tip {
+    background-color: var(--jungle-green);
+    border-left: 4px solid var(--amber);
+    margin-top: 28px;
+    padding: 10px;
+}
+.sidebar-tip h3 {
+    color: var(--amber);
+    font-size: 15px;
+    margin-top: 0;
+}
+.sidebar-tip p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+.header {
+    background-color: var(--jungle-green);
+    width: 100%;
+    height: auto;
+}
+.header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.content {
+    background-color: #f7f4e8;
+    min-height: 300px;
+    padding: 20px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--bark);
+    min-height: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.footer-column {
+    flex: 1;
+}
+.footer-column:nth-child(2) {
+    text-align: center;
+}
+.footer-column:last-child {
+    text-align: right;
+}
+
+.menu a {
+    color: var(--canopy-light);
+}
+
+.menu a:hover {
+    color: var(--amber);
+}
+
+.content h1,
+.content h3 {
+    color: var(--jungle-deep);
+}
+
+fieldset {
+    border: 2px solid var(--leaf-green);
+    border-radius: 6px;
+    margin-bottom: 18px;
+}
+
+legend {
+    color: var(--jungle-green);
+    font-weight: bold;
+}
+
+.pet-details-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.pet-type-field,
+.vaccine-field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vaccine-field {
+    grid-column: 2;
+}
+
+.other-pet {
+    display: none;
+}
+
+.row:has(.pet-type option[value="Outros"]:checked) .other-pet {
+    display: block;
+}

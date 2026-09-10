@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template - Utilizar como modelo</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        button {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <h2>ExoVet</h2>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Horario.html">Horario</a></li>
+            </ul>
+
+            <div class="sidebar-section">
+                <h3>Animais atendidos</h3>
+                <p>Aves</p>
+                <p>Répteis</p>
+                <p>Coelhos</p>
+                <p>Pequenos mamíferos</p>
+                <p>Grandes mamíferos</p>
+                <p>Animais perigosos</p>
+            </div>
+
+            <div class="sidebar-contact">
+                <h3>Contato rápido</h3>
+                <p>WhatsApp</p>
+                <strong>+61 491 570 156</strong>
+            </div>
+
+            <div class="sidebar-tip">
+                <h3>Curiosidade da fauna</h3>
+                <p id="fauna-tip">As tartarugas podem reconhecer seus cuidadores pelo cheiro e pela voz.</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <img src="ExoVet.png" alt="Logo da clínica">
+            </div>
+    
+            <div class="content">
+                <h1>Entre em contato conosco!</h1>
+                <p>Estamos à disposição para tirar suas dúvidas, agendar consultas e orientar você sobre os cuidados com seu animal exótico.</p>
+                <h3>Formulario de cadastro</h3>
+            <form onsubmit="if (this.querySelector('.pet-type').value === 'Outros' && !this.querySelector('.other-pet').value.trim()) { alert('Preencha todas os campos corretamente'); return false; } alert('Formulário enviado'); this.reset(); return false;">
+                <fieldset>
+                    <legend>Informações pessoais e do Pet</legend>
+                    <div class="row">
+                        <label>Nome: </label><input type="text" placeholder="Escreva seu nome" required>
+                        <label>Idade: </label><input type="number" placeholder="Insira sua idade" required>
+                        <label>Data de nascimento: </label><input type="date" required><P></P>
+                        <label>Email: </label><input type="email" placeholder="Ensira seu E-mail" required>
+                        <label>Nome do Pet: </label><input type="text" placeholder="Ensira o nome do seu Pet" required>
+                        <label>Idade do Pet: </label><input type="number" placeholder="Ensira a idade do Pet" required><p></p>
+                        <label>Data de nascimento do Pet: </label><input type="date" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalhes do pet: </legend>
+                    <div class="row">
+                        <div class="pet-details-row">
+                            <div class="pet-type-field">
+                                <label>Tipo de pet: </label>
+                            <select class="pet-type" name="rule" required>
+                                <option value="Cachorro">Cachorro</option>
+                                <option value="Gato">Gato</option>
+                                <option value="Cobra">Cobra</option>
+                                <option value="Lagarto">Lagarto</option>
+                                <option value="Passaro">Pássaro</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                            <input class="other-pet" type="text" name="other-pet" placeholder="Digite qual é o seu Pet">
+                            </div>
+                            <div class="vaccine-field">
+                                <label>Vacinas: </label><input type="number" placeholder="Número de vacinas" required>
+                            </div>
+                        </div>
+                        <p></p>
+                        <h3>Ele é agressivo? </h3>
+                        <input type="radio" name="Agressivo[]" value="Sim" required> Sim
+                        <input type="radio" name="Agressivo[]" value="Não"> Não
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <Legend>Veterinario</Legend>
+                    <div class="row">
+                        <h4>De acordo com a especialidade de cada veterinario, selecione o melhor especialista para seu Pet.</h4>
+                        <label>Veterinario: </label>
+                            <select class="Veterinario" name="rule" required>
+                                <option value="Gabriel">Gabriel</option>
+                                <option value="Luisa">Luisa</option>
+                                <option value="Guilherme">Guilherme</option>
+                                <option value="Simone">Simone</option>
+                                <option value="Sueli">Sueli</option>
+                                <option value="Walter">Walter</option>
+                                <option value="José">José</option>
+                            </select><p></p>
+                        <button id="1" type="submit" value="Enviar formulario">Enviar</button>
+                        <button id="2" type="reset" value="Apagar informações  " onclick="alert('Formulario apagado')">Apagar</button>
+                    </div>
+                </fieldset>
+
+                <p></p>
+                <h2>Onde nos encontrar?</h2>
+                <p>Estamos localizados na Austrália, em região de fácil acesso e com estrutura completa para receber você e seu animal com conforto e segurança.</p>
+                <h2>Ponto de referência</h2>
+                <p>Próximo a marcos conhecidos: Estamos a poucos minutos do Parque Regional e em frente à Praça da Fauna, uma referência famosa da região.
+                Comércios nas proximidades: Ao lado de um grande supermercado e de uma farmácia conhecida ótimo para se localizar.
+                Acesso por transporte público: Linhas de ônibus param a menos de 50 metros da clínica, com ponto de parada na porta.
+                Para quem vem de carro: Possuímos estacionamento gratuito no local com vagas amplas e cobertura, facilitando sua chegada mesmo em dias de chuva ou calor intenso.</p>
+                <h2>Como chegar?</h2>
+                <p>De carro: Siga pela Avenida Principal, vire na Rua da Natureza e encontre-nos no número indicado. Placa com a marca ExoVet visível na fachada.
+                De transporte público: Desça no ponto "Praça da Fauna" a clínica fica logo ao lado, com fachada verde e amarela.
+                De outras regiões: Estamos a cerca de 30 minutos do aeroporto, com trajeto bem sinalizado e sem dificuldades de acesso.</p>
+                <h2>Um pouco sobre a região</h2>
+                <p>A Austrália é conhecida mundialmente por sua fauna única e paisagens deslumbrantes, e nossa clínica está situada em uma área tranquila, arborizada e de fácil circulação ideal para manter seu animal calmo e confortável durante o trajeto. Sem ruídos excessivos, sem trânsito intenso e com ambiente que já reflete o respeito à natureza que guia nosso trabalho.</p>
+                <h1>Nos ache no MAPS</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.472239257894!2d151.20396431027154!3d-33.90324357310175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1c3c553d995%3A0x10f0c3de1171e181!2s995%20Bourke%20St%2C%20Waterloo%20NSW%202017%2C%20Austr%C3%A1lia!5e0!3m2!1spt-BR!2sbr!4v1789015540037!5m2!1spt-BR!2sbr" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            <div class="footer">
+                <div class="footer-column">
+                    <h2>Contatos</h2>
+                    <p>Celular: +61 482 915 364</p>
+                    <p>Email: exovet@gmail.com</p>
+                </div>
+                <div class="footer-column">
+                    <h2>Atendimento</h2>
+                    <p>Endereço: Sydney, Austrália</p>
+                    <p>Horário: 08h às 18h</p>
+                </div>
+                <div class="footer-column">
+                    <h2>WhatsApp</h2>
+                    <p>+61 491 570 156</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const faunaTips = [
+            'As tartarugas podem reconhecer seus cuidadores pelo cheiro e pela voz.',
+            'O polvo possui três corações e sangue de cor azul.',
+            'Os camaleões movimentam os olhos de forma independente.',
+            'As araras podem viver por muitas décadas quando recebem os cuidados adequados.',
+            'O ornitorrinco é um dos poucos mamíferos que põem ovos.',
+            'O canguru usa a cauda para manter o equilíbrio.',
+            'O coala dorme muitas horas por dia.',
+            'As corujas conseguem girar bastante a cabeça.',
+            'O diabo-da-tasmânia possui uma mordida muito forte.',
+            'Os ornitorrincos vivem próximos a rios e lagos.'
+        ];
+        let faunaTipIndex = 0;
+
+        setInterval(() => {
+            faunaTipIndex = (faunaTipIndex + 1) % faunaTips.length;
+            document.getElementById('fauna-tip').textContent = faunaTips[faunaTipIndex];
+        }, 10000);
+    </script>
+</body>
+</html>
